@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+body {
+    background-image: url(IMG-20210905-WA0006.jpg);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+  text-align:center;
+  color:white;
+  font-family:'Roboto';
+  font-weight:300;
+  font-size:32px;
+  padding-top:30vh;
+  height:100vh;
+  max-width: 100%;
+  overflow:hidden;
+  transform: translate3d(0,0,0);
+}
+.center{
+    text-align: center;
+}
+div {
+    font-weight:800;
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+div span{
+    font-weight:300;
+    color: darkturquoise;
+}
+div:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 9s infinite;
+}
+
+div:last-of-type {
+  width:0px;
+  animation: reveal 9s infinite;
+}
+
+div:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 9s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+
+p {
+  font-size:12px;
+  color:white;
+  margin-top:200px;
+}
